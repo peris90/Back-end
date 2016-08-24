@@ -71,3 +71,7 @@ Route::post('/students/{id}/delete',function($id){
     $student->delete();
     return Redirect::to('/students');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
